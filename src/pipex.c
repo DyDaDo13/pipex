@@ -6,7 +6,7 @@
 /*   By: dydado13 <dydado13@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 15:14:05 by dydado13          #+#    #+#             */
-/*   Updated: 2023/12/19 18:36:52 by dydado13         ###   ########.fr       */
+/*   Updated: 2023/12/20 22:51:38 by dydado13         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	exec(char *cmd, char **env)
 {
 	char	**s_cmd;
 	char	*path;
-	
+
 	s_cmd = ft_split(cmd, ' ');
 	path = get_path(s_cmd[0], env);
 	if (execve(path, s_cmd, env) == -1)
@@ -27,7 +27,6 @@ void	exec(char *cmd, char **env)
 		exit(0);
 	}
 }
-
 
 void	child(char **av, int *p_fd, char **env)
 {
@@ -43,12 +42,12 @@ void	child(char **av, int *p_fd, char **env)
 void	parent(char **av, int *p_fd, char **env)
 {
 	int		fd;
-	
+
 	fd = open_file(av[4], 1);
 	dup2(fd, 1);
 	dup2(p_fd[0], 0);
 	close(p_fd[1]);
-	exec(av[3], env);	
+	exec(av[3], env);
 }
 
 int	main(int ac, char **av, char **env)

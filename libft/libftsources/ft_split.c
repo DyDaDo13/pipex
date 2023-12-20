@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dylmarti <dylmarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dydado13 <dydado13@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 20:44:16 by dylmarti          #+#    #+#             */
-/*   Updated: 2023/12/20 19:00:22 by dylmarti         ###   ########.fr       */
+/*   Updated: 2023/12/20 22:50:55 by dydado13         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	wd_count(char *s, char c)
 		if (s[i] != c && s[i])
 		{
 			wd++;
-			while ((s[i] != c || trigg == 1) && s[i] )
+			while ((s[i] != c || trigg == 1) && s[i])
 			{
 				if (s[i] == '\'')
 					trigg *= -1;
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 // {
 // 	char	str[] = "bonjour te st  vdrv   fef";
 // 	char	sep = ' ';
-	
+
 // 	printf("%i\n", wd_count(str, sep));
 // 	while 
 // 	return (0);

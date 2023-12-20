@@ -6,7 +6,7 @@
 /*   By: dydado13 <dydado13@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 15:23:52 by dydado13          #+#    #+#             */
-/*   Updated: 2023/12/19 18:16:04 by dydado13         ###   ########.fr       */
+/*   Updated: 2023/12/20 22:51:46 by dydado13         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,3 @@ char	*get_path(char *cmd, char **env)
 	ft_free_tab(s_cmd);
 	return (NULL);
 }
-
